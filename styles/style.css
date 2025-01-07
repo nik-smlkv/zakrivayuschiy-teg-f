@@ -1,5 +1,4 @@
 /* Здесь вы напишете основную часть стилей страницы.
-
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
@@ -7,10 +6,193 @@
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-
 */
 
 .page {
+  --line-height: 21.78px;
+  font-family: "Inter", "Times New Roman", sans-serif;
+  font-variation-settings: "wght" var(--font-wgth), "wdth" var(--font-wdth);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  gap: 100px;
+  background: var(--background-image),
+    repeating-linear-gradient(
+      90deg,
+      /* Полоски идут слева направо */ #d3d3d3,
+      /* Цвет полоски */ #d3d3d3 2px,
+      /* Ширина полоски */ transparent 2px,
+      /* Прозрачная полоска */ transparent 4px /* Ширина прозрачной полоски */
+    ),
+    repeating-linear-gradient(
+      180deg,
+      /* Полоски идут сверху вниз */ #d3d3d3,
+      /* Цвет полоски */ #d3d3d3 2px,
+      /* Ширина полоски */ transparent 2px,
+      /* Прозрачная полоска */ transparent 4px /* Ширина прозрачной полоски */
+    ),
+    linear-gradient(
+      180deg,
+      rgba(231, 231, 231, 1) 0.01%,
+      /* Начинаем с самого светлого оттенка */ rgba(26, 26, 26, 1) 100%
+        /* Переход к темному цвету */
+    );
+
+  background-repeat: no-repeat, repeat, repeat; /* Повторяем два градиента */
+  background-size: cover; /* Занимает всё пространство страницы */  
+}
+
+.header {
+  margin-top: 100px;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  position: relative;
+  min-inline-size: 696px;
+  min-block-size: 368px;
+  gap: 20px;
+}
+
+.title {
+  --line-height: 4.0625rem;
+  --font-size: 4.0625rem;
+  font-size: var(--font-size);
+  font-family: var(--font-family-press);
+  line-height: var(--line-height);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  --line-height: 1.4375rem;
+  --font-size: 1.4375rem;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-family: var(--font-family-press);
+  font-weight: 400;
+}
+
+.cards__body {
+  gap: 52px;
+}
+
+.card {
+  background-color: #ffffff;
+  max-inline-size: 696px;
+  overflow: hidden;
+}
+.card__title {
+  padding: 3px 24px 3px 10px;
+  width: 100%;
+  text-align: left;
+  font-size: var(--font-size);
+  border-top: var(--border);
+  border-right: var(--border);
+  border-left: var(--border);
+}
+.card img {
+  max-width: 696px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__block {
+  gap: 27px;
+  padding: 25px;
+  border-bottom: var(--border);
+  border-right: var(--border);
+  border-left: var(--border);
+}
+
+.card__description {
+  gap: 25px;
+  align-items: start;
+}
+
+.like-icon {
+  align-self: center;
+  cursor: pointer;
+}
+
+.card__like-button.flex-style {
+  align-self: end;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.card__img-brown {
+  filter: hue-rotate(360deg) saturate(0.4) brightness(1.4) grayscale(0.5);
+}
+
+.card__img-hardlight {
+  mix-blend-mode: hard-light;
+  filter: hue-rotate(370deg) saturate(2) contrast(2.3) brightness(0.6);
+}
+
+.card__img-brownlight {
+  filter: hue-rotate(30deg) saturate(1.2) brightness(1.1) grayscale(0.2);
+}
+
+.card__img-exclusion {
+  mix-blend-mode: exclusion;
+}
+
+.card__img-gray {
+  filter: grayscale(0.1) brightness(1.1) contrast(1.1) sepia(0.9);
+}
+.card__img-blur {
+  filter: blur(12px);
+}
+.card__img-green {
+  filter: hue-rotate(100deg) saturate(1.3) contrast(1.2) brightness(0.7)
+    opacity(0.6) blur(1.5px);
+}
+.image-border {
+  overflow: hidden;
+  border: var(--border);
+}
+.image__container {
+  position: relative;
+  max-inline-size: 696px;
+  max-block-size: 696px;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.image__description {
+  --font-size: 14px;
+  --line-height: 14px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 1;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  font-family: var(--font-family-press);
+  font-variation-settings: "wght" var(--font-wgth), "wdth" var(--font-wdth);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  text-shadow: -1px -1px 0 var(--text-shadow), 1px -1px 0 var(--text-shadow),
+    -1px 1px 0 var(--text-shadow), 1px 1px 0 var(--text-shadow);
+}
+
+@supports ((-webkit-text-stroke: 1px white) or (text-stroke: 1px white)) {
+  .image__description {
+    text-stroke: 1px var(--text-shadow);
+  }
+}
+
+.button__text {
+  cursor: pointer;
+  padding: 11.1px 37px;
+  border: var(--border);
+  text-align: left;
+  --line-height: 0.7875rem;
+  --font-size: 0.7875rem;
+  font-size: var(--font-size);
+  font-family: var(--font-family-press);
+  line-height: var(--line-height);
 }

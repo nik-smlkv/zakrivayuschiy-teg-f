@@ -24,6 +24,7 @@ ol,
 li {
   margin: 0;
   padding: 0;
+  
 }
 
 a {
@@ -32,6 +33,8 @@ a {
 
 button,
 input {
+  background-color: transparent;
+  border: 0;
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
@@ -41,7 +44,10 @@ ul,
 ol {
   list-style: none;
 }
-
+svg{
+  width: 100%;
+  height: auto;
+}
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -50,4 +56,11 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+.flex-style{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
