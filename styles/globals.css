@@ -57,7 +57,10 @@ svg{
   clip-path: inset(50%);
   white-space: nowrap;
 }
-
+main{
+	position: relative;
+	gap: 50px;
+}
 .flex-style{
   display: flex;
   flex-direction: column;
