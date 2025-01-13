@@ -4,10 +4,9 @@
   --font-wdth: 100;
   --font-size: 18px;
   --line-height: 21px;
-  --title-color: #000000;
-  --subtitle-color: #000000;
-  --border: 2px solid #000000;
-  --bg-color: #ffffff;
+  --bl-color: rgba(0, 0, 0, 1);
+  --border: 2px solid var(--bl-color);
+  --wh-color: rgba(255, 255, 255, 1);
   --text-shadow: rgba(255, 255, 255, 1);
   --font-family-press: "Press Start 2P", "Times New Roman", sans-serif;
   --background-image: url("/images/background.png");
