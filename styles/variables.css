@@ -1,13 +1,16 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --font-wgth: 400;
-  --font-wdth: 100;
-  --font-size: 18px;
-  --line-height: 21px;
-  --bl-color: rgba(0, 0, 0, 1);
-  --border: 2px solid var(--bl-color);
-  --wh-color: rgba(255, 255, 255, 1);
-  --text-shadow: rgba(255, 255, 255, 1);
-  --font-family-press: "Press Start 2P", "Times New Roman", sans-serif;
-  --background-image: url("/images/background.png");
+	--font-wgth: 400;
+	--font-wdth: 100;
+	--font-size: 18px;
+	--line-height: 21px;
+	--bl-color: rgba(0, 0, 0, 1);
+	--border: 2px solid var(--bl-color);
+	--wh-color: rgba(255, 255, 255, 1);
+	--text-shadow: rgba(255, 255, 255, 1);
+	--font-family-press: "Press Start 2P", "Times New Roman", sans-serif;
+	--background-image: url("/images/background.png");
+	--tr-dur: 0.3s;
+	--delay: 0.03s;
+
 }
