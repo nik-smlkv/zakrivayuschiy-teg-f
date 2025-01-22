@@ -68,11 +68,11 @@
 }
 
 .save-icon rect {
-	--tr-anim: 0.5s fill ease-in-out;
+	--tr-anim: 0.3s fill ease-in-out;
 	transition: var(--tr-anim);
 }
 
-.button-effect:hover .save-icon rect {
+.button-effect:hover #save-symbol-icon rect {
 	fill: white;
 }
 
@@ -94,6 +94,28 @@
 
 .like-icon {
 	cursor: pointer;
+	transition: outline 0.3s ease-in-out;
+	outline: none;
+}
+
+.like-icon:focus-visible {
+	outline: solid 2px;
+}
+
+.like-icon:focus {
+	outline: none;
+}
+
+.like-icon.is-liked {
+	transform-origin: center;
+	animation: like-icon-animation 0.5s ease-in 0.1s forwards 1;
+	transition: background-color var(--tr-anim);
+}
+
+.like-icon.is-liked .sparks {
+	transform-origin: center;
+	animation: sparks-animation 0.3s ease-in 0.3s forwards 1;
+	transition: opacity var(--tr-anim);
 }
 
 .core {}
@@ -149,6 +171,7 @@
 .like-icon.is-liked .heart .contour {
 	opacity: 1;
 	fill: #FF0000;
+	transition: fill 0.1s linear;
 }
 
 .core {
@@ -162,14 +185,13 @@
 
 .like-icon.is-liked .sparks {
 	fill: #FF0000;
-	opacity: 1;
-	transition: fill var(--tr-dur), opacity var(--tr-dur);
 }
 
 
 .like-icon.is-liked .heart .core {
 	fill: #FF0000;
-	transition: fill var(--tr-dur);
+	--tr-delay: 0.06s transition: fill var(--tr-dur) var(--tr-delay);
+
 }
 
 @media(hover:hover) {
@@ -309,8 +331,6 @@
 }
 
 .button-text-style {
-	--tr-anim: 0.3s;
-	transition: all var(--tr-anim) ease-in-out;
 	position: relative;
 	--line-height: 0.7875rem;
 	--font-size: 0.7875rem;
@@ -378,7 +398,7 @@
 	z-index: 1;
 	position: relative;
 	border: var(--border);
-	padding: 11.5px 37px;
+	padding: 11.8px 37px;
 	cursor: pointer
 }
 
