@@ -47,6 +47,18 @@ ol {
 	list-style: none;
 }
 
+figure {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+figcaption {
+	margin: 0;
+	outline: none;
+	padding: 0;
+}
+
 svg {
 	position: relative;
 	width: auto;
