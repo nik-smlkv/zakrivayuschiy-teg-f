@@ -8,8 +8,8 @@
 	--border: 2px solid var(--bl-color);
 	--wh-color: rgba(255, 255, 255, 1);
 	--text-shadow: rgba(255, 255, 255, 1);
-	--font-family-press: "Press Start 2P", "Times New Roman", sans-serif;
-	--background-image: url("/images/background.png");
+	--main-font: "Press Start 2P", "Times New Roman", sans-serif;
+	--background-image: url("../images/background.png");
 	--tr-dur: 0.3s;
 	--tr-anim: 0.3s;
 	--delay: 0.03s;

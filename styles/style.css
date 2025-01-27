@@ -41,7 +41,7 @@
 	background-color: var(--wh-color);
 	position: relative;
 	min-inline-size: clamp(375px, 50vw, 700px);
-	min-block-size: clamp(327px, 50vw, 368px);
+	height: 100%;
 	gap: 20px;
 }
 
@@ -49,7 +49,7 @@
 	--line-height: 4.0625rem;
 	--font-size: 4.0625rem;
 	font-size: var(--font-size);
-	font-family: var(--font-family-press);
+	font-family: var(--font-main);
 	line-height: var(--line-height);
 	font-weight: 400;
 	text-transform: uppercase;
@@ -159,6 +159,10 @@
 	transition: fill var(--tr-dur) var(--delay);
 }
 
+#floppyicon {
+	fill: white;
+}
+
 @media(hover:hover) {
 	.button-effect:hover {
 		color: var(--wh-color);
@@ -168,9 +172,7 @@
 		animation: button-hovered 0.5s forwards;
 	}
 
-	.button-effect:hover #save-symbol-icon rect {
-		fill: white;
-	}
+
 
 	.like-icon:hover .heart .contour {
 		fill: black;
@@ -212,7 +214,8 @@
 
 .like-icon.is-liked .heart .core {
 	fill: #FF0000;
-	--tr-delay: 0.06s transition: fill var(--tr-dur) var(--tr-delay);
+	--tr-delay: 0.06s;
+	transition: fill var(--tr-dur) var(--tr-delay);
 
 }
 
@@ -221,7 +224,7 @@
 	--font-size: 1.4375rem;
 	font-size: var(--font-size);
 	line-height: var(--line-height);
-	font-family: var(--font-family-press);
+	font-family: var(--font-main);
 	font-weight: 400;
 }
 
@@ -252,6 +255,7 @@
 .card img {
 	width: auto;
 	height: 100%;
+	object-position: center;
 	object-fit: cover;
 }
 
@@ -329,8 +333,7 @@
 	z-index: 1;
 	opacity: 0.5;
 	mix-blend-mode: hard-light;
-	font-family: var(--font-family-press);
-	font-variation-settings: "wght" var(--font-wgth), "wdth" var(--font-wdth);
+	font-family: var(--font-main);
 	font-size: var(--font-size);
 	line-height: var(--line-height);
 	text-shadow: -1px -1px 0 var(--text-shadow), 1px -1px 0 var(--text-shadow),
@@ -340,6 +343,7 @@
 @supports ((-webkit-text-stroke: 1px white) or (text-stroke: 1px white)) {
 	.image__description {
 		text-stroke: 1px var(--text-shadow);
+		text-shadow: none;
 	}
 }
 
@@ -348,7 +352,7 @@
 	--line-height: 0.7875rem;
 	--font-size: 0.7875rem;
 	font-size: var(--font-size);
-	font-family: var(--font-family-press);
+	font-family: var(--font-main);
 	line-height: var(--line-height);
 }
 
@@ -383,7 +387,7 @@
 	font-size: var(--font-size);
 	line-height: var(--line-height);
 	text-transform: uppercase;
-	font-family: var(--font-family-press);
+	font-family: var(--font-main);
 	flex: 1 1 234px;
 }
 

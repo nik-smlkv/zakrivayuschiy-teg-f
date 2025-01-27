@@ -1,5 +1,6 @@
-
-            <symbol id="dialog-symbol-icon">
+<svg class="save-icon" width="21" height="21" viewBox="0 0 21 21" fill="none"
+				xmlns="http://www.w3.org/2000/svg" >
+            <symbol id="floppyicon" viewBox="0 0 21 21">
               <rect width="1.61538" height="1.61538" fill="black" />
               <rect y="1.61523" width="1.61538" height="1.61538" fill="black" />
               <rect y="3.23096" width="1.61538" height="1.61538" fill="black" />
@@ -15,7 +16,7 @@
               <rect y="19.3848" width="1.61538" height="1.61538" fill="black" />
               <rect
                 x="17.7692"
-                width="1.61538"
+                width="1.61538"	
                 height="1.61538"
                 transform="rotate(90 17.7692 0)"
                 fill="black"
@@ -540,3 +541,4 @@
                 fill="black"
               />
             </symbol>
+</svg>
