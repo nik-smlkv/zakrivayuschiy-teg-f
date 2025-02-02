@@ -5,6 +5,7 @@
   --font-size: 18px;
   --line-height: 21px;
   --bl-color: rgba(0, 0, 0, 1);
+  --icon-red-color: #FF0000;
   --border: 2px solid var(--bl-color);
   --wh-color: rgba(255, 255, 255, 1);
   --text-shadow: rgba(255, 255, 255, 1);
@@ -14,5 +15,5 @@
   --background-image: url("../images/background.png");
   --tr-dur: 0.3s;
   --tr-anim: 0.3s;
-  --delay: 0.03s;
+  --tr-delay: 0.03s;
 }
