@@ -9,27 +9,6 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-@keyframes button-hovered {
-	0% {
-		transform: translateX(-100%);
-	}
-
-	100% {
-		transform: translateX(0%);
-	}
-}
-
-@keyframes button-hovered-out {
-	0% {
-		transform: translateX(0%);
-	}
-
-	100% {
-		transform: translateX(-100%);
-	}
-}
-
-
 @keyframes like-icon-animation {
 	0% {
 		transform: scale(1);
