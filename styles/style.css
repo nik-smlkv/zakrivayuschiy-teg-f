@@ -19,7 +19,6 @@
 	min-block-size: 100dvb;
 	margin: 0 auto;
 	width: 100%;
-	gap: 100px;
 	background: repeating-linear-gradient(90deg,
 			#d3d3d3,
 			#d3d3d3 2px,
@@ -33,6 +32,7 @@
 		linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 	background-size: cover;
 	background-attachment: fixed;
+	margin-bottom: clamp(100px, 2vw, 103px);
 }
 
 .header {
@@ -75,7 +75,7 @@
 }
 
 .button-like {
-	padding: 7.8px 35.4px;
+	padding: 8px 35.4px;
 }
 
 .button-effect::before {
@@ -106,13 +106,19 @@
 	justify-content: end;
 	align-items: center;
 	gap: 6px;
+	outline: none;
 }
 
 .like-icon {
-	width: 40%;
-	margin-top: 2.5px;
+	width: 61.4px;
+	height: 100%;
 	cursor: pointer;
-	outline: none;
+	outline: solid 2px transparent;
+	transition: outline-color var(--tr-dur) ease;
+}
+
+.like-icon.flex-style {
+	flex-direction: row;
 }
 
 .sparks,
@@ -122,7 +128,7 @@
 }
 
 .like-icon:focus-visible {
-	outline: solid 2px;
+	outline: solid 2px var(--bl-color);
 }
 
 .button-like:focus .like-icon {
@@ -243,11 +249,6 @@
 .card__description {
 	gap: 27px;
 	align-items: start;
-}
-
-.like-icon {
-	align-self: center;
-	cursor: pointer;
 }
 
 .card__img-brown {
