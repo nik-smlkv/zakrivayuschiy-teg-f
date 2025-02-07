@@ -221,6 +221,7 @@
 .card {
 	max-inline-size: 696px;
 	overflow: hidden;
+	border: var(--border);
 	background-color: var(--wh-color);
 }
 
@@ -232,9 +233,7 @@
 	text-align: left;
 	font-size: var(--font-size);
 	line-height: var(--line-height);
-	border-top: var(--border);
-	border-right: var(--border);
-	border-left: var(--border);
+	border-bottom: var(--border);
 	padding: 3.61px 24px 3.61px 10px;
 }
 
@@ -248,9 +247,7 @@
 .card__block {
 	gap: 25px;
 	padding: 25.2px 23px;
-	border-bottom: var(--border);
-	border-right: var(--border);
-	border-left: var(--border);
+	border-top: var(--border);
 }
 
 .card__description {
@@ -264,7 +261,7 @@
 
 .card__img-hardlight {
 	mix-blend-mode: hard-light;
-	filter: hue-rotate(370deg) saturate(2) contrast(2.3) brightness(0.6);
+	filter: hue-rotate(370deg) saturate(2.3) contrast(2.3) brightness(0.6);
 }
 
 .card__img-brownlight {
@@ -273,6 +270,7 @@
 
 .card__img-exclusion {
 	mix-blend-mode: exclusion;
+	filter: brightness(1.1) contrast(0.5);
 }
 
 .card__img-gray {
@@ -296,8 +294,8 @@
 	position: relative;
 	display: flex;
 	flex: 1 1 100%;
-	max-width: 700px;
-	max-height: 700px;
+	max-width: 696px;
+	max-height: 695.8px;
 }
 
 .text-uppercase {
@@ -322,7 +320,6 @@
 
 @supports ((-webkit-text-stroke: 1px white) or (text-stroke: 1px white)) {
 	.image__description {
-		
 		-webkit-text-stroke: 1px var(--text-shadow);
 		text-stroke: 1px var(--text-shadow);
 		text-shadow: none;
@@ -429,12 +426,14 @@
 	}
 
 	.card__block {
+		padding: 25px;
+	}
+	.card__block-padding{
 		padding: 25px 27px;
 	}
-
 	.image__description {
-		top: 25px;
-		right: 13px;
+		top: 20px;
+		right: 9px;
 	}
 
 	.page {
