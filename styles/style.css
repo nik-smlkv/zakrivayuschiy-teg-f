@@ -56,7 +56,7 @@
 	text-transform: uppercase;
 }
 
-.button__block.flex-style {
+.card-like-buttons {
 	align-self: end;
 	gap: 6px;
 	flex-direction: row;
@@ -69,22 +69,14 @@
 	width: 100%;
 	font-size: 16px;
 	cursor: pointer;
-	--border: 2px solid var(--wh-color);
+	--border: 2px solid var(--bl-color);
 	border: var(--border);
 }
 
 .button-effect:focus {
-	box-shadow: 2px 2px 0px 0px var(--wh-color);
-}
-
-.button-style-save:focus {
 	box-shadow: 2px 2px 0px 0px var(--bl-color);
 }
 
-.button-like {
-	padding: 11.71px 0px;
-	width: 130px;
-}
 
 .button-effect::before {
 	content: "";
@@ -95,8 +87,7 @@
 	transform: translateX(-100%);
 	width: 100%;
 	height: 100%;
-	mix-blend-mode: difference;
-	background-color: var(--wh-color);
+	background-color: var(--bl-color);
 	transition: transform var(--tr-dur) ease-in-out;
 	z-index: 0;
 }
@@ -115,20 +106,10 @@
 }
 
 .card__like-button {
-	display: flex;
-	align-self: end;
-	justify-content: end;
-	align-items: center;
-	gap: 6px;
 	outline: none;
 	background-color: var(--wh-color);
-}
-
-.like-icon {
-	height: 100%;
-	cursor: pointer;
-	outline: solid 2px transparent;
-	transition: outline-color var(--tr-dur) ease;
+	padding: 8px 0px;
+	width: 130px;
 }
 
 .sparks,
@@ -137,16 +118,18 @@
 	opacity: 0;
 }
 
-.like-icon:focus-visible {
+.card__icon-button {
+	height: 100%;
+	cursor: pointer;
+	outline: solid 2px transparent;
+	transition: outline-color var(--tr-dur) ease;
+}
+
+.card__icon-button:focus-visible {
 	outline: solid 2px var(--bl-color);
 }
 
-.button-like:focus .like-icon {
-	outline: none;
-}
-
 .main-body {
-
 	transition: fill var(--tr-dur) linear, opacity var(--tr-dur) linear;
 }
 
@@ -157,7 +140,7 @@
 
 .core {
 	--tr-delay: 0.03s;
-	transition: fill var(--tr-dur) linear, opacity var(--tr-dur) var(--tr-delay) linear;
+	transition: fill var(--tr-dur) var(--tr-delay) linear, opacity var(--tr-dur) var(--tr-delay) linear;
 }
 
 .like-icon:hover .main-body,
