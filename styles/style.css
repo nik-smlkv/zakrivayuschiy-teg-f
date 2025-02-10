@@ -70,6 +70,7 @@
 	font-size: 16px;
 	cursor: pointer;
 	--border: 2px solid var(--bl-color);
+	transition: box-shadow var(--tr-dur) ease;
 	border: var(--border);
 }
 
